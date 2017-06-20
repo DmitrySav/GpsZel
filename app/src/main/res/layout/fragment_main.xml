@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewSattelites"
+        android:layout_alignStart="@+id/textViewSattelites"
+        android:layout_marginBottom="71dp"
+        android:id="@+id/textViewGps"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        android:id="@+id/chronometer"
+        android:layout_above="@+id/imageButtonStop"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
+
+    <TextView
+        android:text="@string/sattelites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/textViewSattelites"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_above="@+id/chronometer"
+        android:layout_alignStart="@+id/imageButtonPlayPause"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_play_circle_filled_black_48dp"
+        android:layout_marginBottom="98dp"
+        android:id="@+id/imageButtonPlayPause"
+        android:background="@drawable/ic_play_circle_filled_black_48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@id/imageButtonStop"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_stop_black_48dp"
+        android:id="@+id/imageButton2"
+        android:background="@drawable/ic_stop_black_48dp"
+        android:layout_alignTop="@+id/imageButtonPlayPause"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_stop_black_48dp"
+        android:id="@+id/imageButton"
+        android:background="@drawable/ic_stop_black_48dp"
+        android:layout_alignTop="@+id/imageButtonPlayPause"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_stop_black_48dp"
+        android:id="@+id/imageButtonStop"
+        android:background="@drawable/ic_stop_black_48dp"
+        android:layout_alignTop="@+id/imageButtonPlayPause"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="@string/selectBlu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp"
+        android:id="@+id/textSelectBlu"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_add_location_black_48dp"
+        android:layout_marginStart="45dp"
+        android:id="@+id/imageButtonAddPOI"
+        android:background="@drawable/ic_add_location_black_48dp"
+        android:layout_alignBottom="@+id/imageButtonStop"
+        android:layout_toEndOf="@+id/imageButtonStop"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/spinner"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textSelectBlu"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/imageButton2"/>
+
+    <Button
+        android:text="@string/connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonBluetooth"
+        android:layout_marginStart="26dp"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_toEndOf="@+id/spinner"
+        android:onClick="onClickConnect"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_alignParentStart="true">
+    </LinearLayout>
+
+</RelativeLayout>
